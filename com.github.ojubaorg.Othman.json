@@ -1,7 +1,7 @@
 {
     "id": "com.github.ojubaorg.Othman",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.24",
+    "runtime-version": "3.28",
     "sdk": "org.gnome.Sdk",
     "command": "othman-browser",
     "rename-icon": "Othman",
@@ -10,8 +10,7 @@
     "finish-args": [
             "--share=ipc", "--socket=x11",
             "--device=dri",
-            "--socket=wayland",
-            "--share=network"
+            "--socket=wayland"
     ],
     "modules": [
     {
@@ -43,6 +42,7 @@
     },
     {
       "name": "imagemagick",
+      "cleanup": ["*"],
       "config-opts": [
         "--enable-static=no",
         "--disable-docs",
@@ -75,8 +75,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://www.imagemagick.org/download/releases/ImageMagick-7.0.7-25.tar.xz",
-          "sha256": "3538c33b2bb44d55ba146271e7584d79c1d2d10ab592a6efa49264ad630bf961"
+          "url": "https://www.imagemagick.org/download/releases/ImageMagick-7.0.7-30.tar.xz",
+          "sha256": "f8f5cd7b4a3abb6b1a93b54ae8eb55a1a87cdba47f8efd187178a2d0eb9ba712"
         }
       ]
     },
@@ -110,8 +110,8 @@
         "sources": [
             {
                 "type": "archive",
-                "url": "http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.24/pygobject-3.24.1.tar.xz",
-                "sha256": "a628a95aa0909e13fb08230b1b98fc48adef10b220932f76d62f6821b3fdbffd"
+                "url": "http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.28/pygobject-3.28.2.tar.xz",
+                "sha256": "ac443afd14fcb9ff5744b65d6e2b380e70510278404fb8684a9b9fb089e6f2ca"
         }
         ]
     },
@@ -127,7 +127,7 @@
             {
                 "type": "git",
                 "url": "https://github.com/ojuba-org/othman.git",
-                "commit": "4296155d967a40726fc7177ac6f6156cc6284036"
+                "commit": "2142d6db2c2a82801f7a08b3f026d3d3c78d514a"
         },
         {
                 "type": "patch",
@@ -141,10 +141,9 @@
         "build-commands": [
                 "make PREFIX=/app install"
         ],
-            "post-install": [
-                "mkdir -p /app/share/appdata",
-                "cp com.github.ojubaorg.Othman.appdata.xml /app/share/appdata"
-        ]
+        "post-install": [
+            "mkdir -p /app/share/metainfo",
+            "cp com.github.ojubaorg.Othman.appdata.xml /app/share/metainfo"        ]
     }
     ]
 }
