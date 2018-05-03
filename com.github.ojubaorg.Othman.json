@@ -141,9 +141,9 @@
         "build-commands": [
                 "make PREFIX=/app install"
         ],
-            "post-install": [
-                "install -Dm644 com.github.ojubaorg.Othman.appdata.xml /app/share/metainfo"
-        ]
+        "post-install": [
+            "mkdir -p /app/share/metainfo",
+            "cp com.github.ojubaorg.Othman.appdata.xml /app/share/metainfo"        ]
     }
     ]
 }
