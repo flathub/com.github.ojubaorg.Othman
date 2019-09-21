@@ -1,7 +1,7 @@
 {
     "id": "com.github.ojubaorg.Othman",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.28",
+    "runtime-version": "3.34",
     "sdk": "org.gnome.Sdk",
     "command": "othman-browser",
     "rename-icon": "Othman",
@@ -81,53 +81,18 @@
       ]
     },
     {
-        "name": "pycairo",
-        "build-options" : {
-            "env": {
-                "PYTHON": "/usr/bin/python"
-            }
-        },
-        "buildsystem": "simple",
-        "build-commands": [
-            "python ./setup.py build",
-            "python ./setup.py install --prefix=/app"
-        ],
-        "sources": [
-            {
-                "type": "archive",
-                "url": "https://github.com/pygobject/pycairo/releases/download/v1.12.0/pycairo-1.12.0.tar.gz",
-                "sha256": "243c351d7abcef41ac1fa984d2c753f3d065336a0fcf4c20fafb191b23423095"
-            }
-        ]
-    },
-    {
-        "name": "pygobject",
-        "build-options" : {
-                "env": {
-                    "PYTHON": "/usr/bin/python"
-                }
-        },
-        "sources": [
-            {
-                "type": "archive",
-                "url": "http://ftp.acc.umu.se/pub/GNOME/sources/pygobject/3.28/pygobject-3.28.2.tar.xz",
-                "sha256": "ac443afd14fcb9ff5744b65d6e2b380e70510278404fb8684a9b9fb089e6f2ca"
-        }
-        ]
-    },
-    {
         "name": "othman",
         "buildsystem": "simple",
         "build-options" : {
                 "env": {
-                    "PYTHON": "/usr/bin/python"
+                    "PYTHON": "/usr/bin/python3"
                 }
         },
         "sources": [
             {
                 "type": "git",
                 "url": "https://github.com/ojuba-org/othman.git",
-                "commit": "2142d6db2c2a82801f7a08b3f026d3d3c78d514a"
+                "commit": "45cf5cf4e220d0b52d58c099a38b7d52ce70cdd6"
         },
         {
                 "type": "patch",
@@ -139,7 +104,7 @@
         }
         ],
         "build-commands": [
-                "make PREFIX=/app install"
+                "make PREFIX=/app datadir=/app/share install"
         ],
         "post-install": [
             "mkdir -p /app/share/metainfo",
