@@ -13,7 +13,7 @@
             "--socket=wayland"
     ],
     "modules": [
-    "shared-modules/intltool/intltool-0.51.json"
+    "shared-modules/intltool/intltool-0.51.json",
     {
         "name": "amiri-quran-fonts",
         "buildsystem":"simple",
