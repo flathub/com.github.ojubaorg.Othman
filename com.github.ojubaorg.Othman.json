@@ -96,16 +96,12 @@
                 "commit": "45cf5cf4e220d0b52d58c099a38b7d52ce70cdd6"
         },
         {
-                "type": "patch",
-                "path": "othman-flatpak-path.patch"
-        },
-        {
                 "type": "file",
                 "path": "com.github.ojubaorg.Othman.appdata.xml"
         }
         ],
         "build-commands": [
-                "make PREFIX=/app datadir=/app/share install"
+                "make PREFIX=/app install"
         ],
         "post-install": [
             "mkdir -p /app/share/metainfo",
