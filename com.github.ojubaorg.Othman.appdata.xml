@@ -6,6 +6,7 @@ SentUpstream: 2017-1-8
 -->
 <application>
   <id type="desktop">Othman.desktop</id>
+  <name>Othman</name>
   <metadata_license>CC0-1.0</metadata_license>
   <summary>Electronic Quran Browser</summary>
   <summary xml:lang="ar">مصحف إلكتروني</summary>
