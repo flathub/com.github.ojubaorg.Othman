@@ -13,15 +13,14 @@
             "--socket=wayland"
     ],
     "modules": [
-    "shared-modules/intltool/intltool-0.51.json",
     {
         "name": "amiri-quran-fonts",
         "buildsystem":"simple",
         "sources": [
             {
                 "type": "archive",
-                "url": "https://github.com/alif-type/amiri/archive/0.109.tar.gz",
-                "sha256": "bbfd6edbcad28607903322bd5d1feb61d0d8202191e6f1a6d7d357c831612ed4"
+                "url": "https://github.com/alif-type/amiri/archive/054d41dc54992ff082808f6cfd2a068b59d3211c.tar.gz",
+                "sha256": "ea6e035baad47dbfcc6a0e9ae1f49d7eab3d7e47938ff2d37c77b4b17437c10e"
             },
             {
                 "type": "file",
@@ -42,46 +41,6 @@
         ]
     },
     {
-      "name": "imagemagick",
-      "cleanup": ["*"],
-      "config-opts": [
-        "--enable-static=no",
-        "--disable-docs",
-        "--disable-deprecated",
-        "--without-autotrace",
-        "--without-bzlib",
-        "--without-djvu",
-        "--without-dps",
-        "--without-fftw",
-        "--without-fontconfig",
-        "--without-fpx",
-        "--without-freetype",
-        "--without-gvc",
-        "--without-jbig",
-        "--without-jpeg",
-        "--without-lcms",
-        "--without-lzma",
-        "--without-magick-plus-plus",
-        "--without-openexr",
-        "--without-openjp2",
-        "--without-pango",
-        "--without-raqm",
-        "--without-tiff",
-        "--without-webp",
-        "--without-wmf",
-        "--without-x",
-        "--without-xml",
-        "--without-zlib"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "url": "https://www.imagemagick.org/download/releases/ImageMagick-7.0.8-65.zip",
-          "sha256": "b1c3df9ab74887ac12cf412b78a1f7a168476ce6e5b47455ff78844932b643ee"
-        }
-      ]
-    },
-    {
         "name": "othman",
         "buildsystem": "simple",
         "build-options" : {
@@ -93,7 +52,7 @@
             {
                 "type": "git",
                 "url": "https://github.com/ojuba-org/othman.git",
-                "commit": "c8c249abfc58d8cec5ae79c097db29ccbc3d5886"
+                "commit": "7779cedfeb85604ee9e0c2a7fede5a4537df8f95"
         },
         {
                 "type": "file",
@@ -101,7 +60,7 @@
         }
         ],
         "build-commands": [
-                "make PREFIX=/app install"
+                "make TEST_DEPS=1 PREFIX=/app install"
         ],
         "post-install": [
             "mkdir -p /app/share/metainfo",

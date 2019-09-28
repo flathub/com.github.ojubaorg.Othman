@@ -25,7 +25,7 @@ SentUpstream: 2017-1-8
     <screenshot type="default">https://raw.githubusercontent.com/flathub/com.github.ojubaorg.Othman/master/othman-screenshot.png</screenshot>
   </screenshots>
   <releases>
-    <release version="0.5.1" date="2018-05-03"/>
+    <release version="0.6.0" date="2019-09-28"/>
 </releases>
   <content_rating type="oars-1.1">
     <content_attribute id="violence-cartoon">none</content_attribute>
