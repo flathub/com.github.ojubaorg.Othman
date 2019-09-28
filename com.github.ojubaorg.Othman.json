@@ -52,7 +52,7 @@
             {
                 "type": "git",
                 "url": "https://github.com/ojuba-org/othman.git",
-                "commit": "7779cedfeb85604ee9e0c2a7fede5a4537df8f95"
+                "commit": "942ecfae9e8f8f7a72f954ee529d49f359810714"
         },
         {
                 "type": "file",
