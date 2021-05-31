@@ -1,7 +1,7 @@
 {
     "id": "com.github.ojubaorg.Othman",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "3.34",
+    "runtime-version": "40",
     "sdk": "org.gnome.Sdk",
     "command": "othman-browser",
     "rename-icon": "Othman",
@@ -59,6 +59,10 @@
         {
                 "type": "file",
                 "path": "com.github.ojubaorg.Othman.appdata.xml"
+        },
+        {
+                "type": "patch",
+                "path": "specify-version.patch"
         }
         ],
         "build-commands": [
