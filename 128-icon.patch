@@ -1,23 +1,13 @@
 diff --git a/Makefile b/Makefile
-index 53b05f0..183daea 100644
+index 53b05f0..d557c6a 100644
 --- a/Makefile
 +++ b/Makefile
-@@ -11,7 +11,7 @@ all: $(TARGETS) icons othman-data/ix.db
- 
- icons:
- 	install -d icons; 
--	for i in 96 72 64 48 36 32 24 22 16; do \
-+	for i in 128 96 72 64 48 36 32 24 22 16; do \
- 		convert Othman-128.png -resize $${i}x$${i} icons/Othman-$${i}.png; \
- 	done
- 
-@@ -28,7 +28,7 @@ install: all
- 	$(PYTHON) setup.py install --prefix=$(PREFIX)
- 	$(INSTALL) -d $(datadir)/applications/
- 	$(INSTALL) -m 0644 Othman.desktop $(datadir)/applications/
--	for i in 96 72 64 48 36 32 24 22 16; do \
-+	for i in 128 96 72 64 48 36 32 24 22 16; do \
+@@ -32,6 +32,8 @@ install: all
  		install -d $(datadir)/icons/hicolor/$${i}x$${i}/apps; \
  		$(INSTALL) -m 0644 -D icons/Othman-$${i}.png $(datadir)/icons/hicolor/$${i}x$${i}/apps/Othman.png; \
  	done
-
++	install -d $(datadir)/icons/hicolor/128x128/apps; \
++	$(INSTALL) -m 0644 -D Othman-128.png $(datadir)/icons/hicolor/128x128/apps/Othman.png;
+ 
+ %.desktop: %.desktop.in
+ 	echo "updating .desktop"
