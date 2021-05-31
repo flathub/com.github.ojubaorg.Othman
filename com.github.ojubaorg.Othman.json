@@ -54,7 +54,8 @@
             {
                 "type": "git",
                 "url": "https://github.com/ojuba-org/othman.git",
-                "commit": "942ecfae9e8f8f7a72f954ee529d49f359810714"
+                "tag": "0.6.0",
+                "commit": "4070f763cf0d5c78be4c284a8d8f17d7a73b6390"
         },
         {
                 "type": "file",
@@ -63,6 +64,10 @@
         {
                 "type": "patch",
                 "path": "specify-version.patch"
+        },
+	{
+                "type": "patch",
+                "path": "128-icon.patch"
         }
         ],
         "build-commands": [

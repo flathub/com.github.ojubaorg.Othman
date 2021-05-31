@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 53b05f0..8328592 100644
+--- a/Makefile
++++ b/Makefile
+@@ -11,7 +11,7 @@ all: $(TARGETS) icons othman-data/ix.db
+ 
+ icons:
+ 	install -d icons; 
+-	for i in 96 72 64 48 36 32 24 22 16; do \
++	for i in 128 96 72 64 48 36 32 24 22 16; do \
+ 		convert Othman-128.png -resize $${i}x$${i} icons/Othman-$${i}.png; \
+ 	done
+ 
