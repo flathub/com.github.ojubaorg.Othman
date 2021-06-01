@@ -1,0 +1,13 @@
+diff --git a/Makefile b/Makefile
+index 53b05f0..d557c6a 100644
+--- a/Makefile
++++ b/Makefile
+@@ -32,6 +32,8 @@ install: all
+ 		install -d $(datadir)/icons/hicolor/$${i}x$${i}/apps; \
+ 		$(INSTALL) -m 0644 -D icons/Othman-$${i}.png $(datadir)/icons/hicolor/$${i}x$${i}/apps/Othman.png; \
+ 	done
++	install -d $(datadir)/icons/hicolor/128x128/apps; \
++	$(INSTALL) -m 0644 -D Othman-128.png $(datadir)/icons/hicolor/128x128/apps/Othman.png;
+ 
+ %.desktop: %.desktop.in
+ 	echo "updating .desktop"
