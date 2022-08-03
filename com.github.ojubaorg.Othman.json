@@ -8,7 +8,8 @@
     "copy-icon": true,
     "rename-desktop-file": "Othman.desktop",
     "finish-args": [
-            "--share=ipc", "--socket=x11",
+            "--share=ipc",
+            "--socket=fallback-x11",
             "--device=dri",
             "--socket=wayland"
     ],
