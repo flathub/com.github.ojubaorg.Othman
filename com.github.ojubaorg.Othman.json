@@ -1,7 +1,7 @@
 {
     "id": "com.github.ojubaorg.Othman",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "42",
+    "runtime-version": "44",
     "sdk": "org.gnome.Sdk",
     "command": "othman-browser",
     "rename-icon": "Othman",
