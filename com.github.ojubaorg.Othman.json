@@ -1,7 +1,7 @@
 {
     "id": "com.github.ojubaorg.Othman",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "44",
+    "runtime-version": "49",
     "sdk": "org.gnome.Sdk",
     "command": "othman-browser",
     "rename-icon": "Othman",
@@ -46,6 +46,12 @@
         {
             "name": "othman",
             "buildsystem": "simple",
+            "build-commands": [
+                "make TEST_DEPS=1 PREFIX=/app install"
+            ],
+            "post-install": [
+                "install -Dm644 com.github.ojubaorg.Othman.appdata.xml /app/share/metainfo/com.github.ojubaorg.Othman.appdata.xml"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -59,19 +65,11 @@
                 },
                 {
                     "type": "patch",
-                    "path": "specify-version.patch"
-                },
-                {
-                    "type": "patch",
-                    "path": "128-icon.patch"
+                    "paths": [
+                        "patches/specify-version.patch",
+                        "patches/128-icon.patch"
+                    ]
                 }
-            ],
-            "build-commands": [
-                "make TEST_DEPS=1 PREFIX=/app install"
-            ],
-            "post-install": [
-                "mkdir -p /app/share/metainfo",
-                "cp com.github.ojubaorg.Othman.appdata.xml /app/share/metainfo"
             ]
         }
     ]
