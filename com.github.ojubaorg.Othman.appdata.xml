@@ -12,7 +12,6 @@ SentUpstream: 2017-1-8
   <summary>Electronic Quran Browser</summary>
   <summary xml:lang="ar">مصحف إلكتروني</summary>
   <description>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by Ojuba.org.**</p>
     <p>Othman Electronic Quran Browser displays Quranic text in Othmani script style as written under authority of
       Othman ibn Affan the companion of prophet Muhammad PBUH</p>
     <p>Othman project features fast search, autoscrolling, copy Quranic text to clipboard.</p>
